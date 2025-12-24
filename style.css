@@ -163,7 +163,7 @@
 }
 .side-bar{
    width: 100%;
-   order: 1;
+   order: 0;
 }
 .filler-section{
    background: #eee;
@@ -325,3 +325,126 @@
    background: white;
    color: #007bff ;
 }
+
+/* MOBILE APPS */
+.mobile-app{
+   
+   background: linear-gradient(135deg,#f8f9fa 0%,#fff 100%);
+   padding: 50px 20px;
+   text-align: center;
+}
+
+.app-content{
+   max-width: 1100px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 30px;
+
+}
+.app-text h2{
+   font-size: 1.6rem;
+   font-weight: 600;
+   margin-bottom: 20px;
+   color: #222;
+
+}
+.app-buttons{
+   display: flex;
+   flex-direction: column;
+   gap: 15px; 
+   align-items: center;
+
+}
+
+.store-btn img{
+   
+   height: 40px;
+   border-radius: 12px;
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+   transition: transform 0.3s;
+}
+.store-btn img:hover{
+   height: 50px;
+  transform: scale(1.05);
+}
+.app-image img{
+   width: 100%;
+   height: auto;
+   border-radius: 12px;
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.footer-content{
+   display: flex;
+   flex-direction: column;
+   padding: 10px 40px;
+   border: 1px solid;
+   border: none;
+   border-radius: 12px;
+   margin: auto;
+   gap: 15px;
+}
+.footer-logo{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 0 10px;
+}
+.footer-logo img{
+   height: 40px;
+   width: 40px;
+   border: 12px none;
+   border-radius: 12px;
+   cursor: pointer;
+   transition: 0.3s;
+   
+}
+.footer-logo img:hover{
+   transform: scale(1.1);
+}
+.copyright{
+   align-items: center;
+   font-size: 1.1rem;
+   font-weight: 400;
+
+}
+/* LOGIN PAGE */
+.model-overlay{
+   display: flex;
+   flex-direction: column;
+   box-shadow: 0  0   10px rgba(0, 0, 0, 0.9);
+}
+.modelcontent{
+   margin: auto;
+   align-items: center;
+   text-align: center;
+   padding: 10px;
+   
+}
+.modelcontent h3{
+   font-size: 0.95rem;
+   font-weight: 400;
+}
+.model-subtilte{
+   font-size: 0.95rem;
+   font-weight: 400;
+}
+.google-btn{
+   padding: 10px;
+   border-radius: 12px;
+   border: 15px;
+   align-items: center;
+   cursor: pointer;
+   transition: 0.3s;
+}
+.google-btn:hover{
+   transform: scale(1.05);
+}
+.login-form{
+   padding: 10px;
+   border: 10px;
+   margin-bottom: 5px;
+   
+}
+
