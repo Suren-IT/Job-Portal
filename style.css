@@ -63,7 +63,7 @@
    font-size: 0.9rem;
    transition: 0.3s;
 }
-.logobtn1:hover{
+.logobtn:hover{
    background: #0056b3;
 }
  .menu-toggle{
@@ -219,7 +219,7 @@
 }
 .job-cards{
    display: grid;
-   grid-template-columns: 1fr;
+   grid-template-columns: repeat(2,1fr);
    gap: 18px;
    margin-bottom: 30px;
 } 
@@ -282,7 +282,7 @@
 }
 .learn{
    background: #f8f9fa;
-   color: whi#333;
+   color: #333;
    border: 1px solid #ddd;
 }
 .learn:hover{
@@ -433,8 +433,8 @@ footer{
    .logo {font-size: 1.5rem;}
    .logo-icon { width: 34px; height: 34px;}
    nav a { margin-left: 25px;}
-   .login-btn {padding: 9px 20px;}
-   .banner { padding: 60x 20px;}
+   .logo-btn {padding: 9px 20px;}
+   .banner { padding: 60px 20px;}
    .banner h1 { font-size: 2.4rem;}
    .banner p { font-size: 1.1rem;}
    .main-content { padding: 0 30px; gap: 35px;}
@@ -451,7 +451,7 @@ footer{
 }
 
 /* MOBILE MENU */
-@media(min-width:599px){
+@media(max-width:599px){
    nav{
       position: fixed;
       top: 60px;
@@ -492,7 +492,7 @@ footer{
    transition: opacity 0.3s ease;
    
 }
-.model-overlay .active{
+.model-overlay.active{
    display: flex;
    opacity: 1;
 }
@@ -504,33 +504,152 @@ footer{
    padding: 30px;
    position: relative;
    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-   animation: modalSlideIn 0.4s ease;
+   animation: modelSlideIn 0.4s ease;
    
 }
-/*
+@keyframes modelSlideIn{
+   from {transform:  translateY(-50px); opacity: 0;}
+   to {transform: translateY(0); opacity: 1;}
+}
+.model-close{
+   position: absolute;
+   top: 15px; right: 15px;
+   background: none;
+   border: none;
+   font-size: 1.1rem;
+   color: #999;
+   cursor: pointer;
+   width: 36px;
+   height: 36px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   transition: 0.2s;
+}
+.model-close:hover{
+   background: #f0f0f0;
+   color: #333;
+}
+
 .modelcontent h3{
-   font-size: 0.95rem;
-   font-weight: 400;
+   font-size: 1.4rem;
+   margin: 0 0 8px;
+   color: #222;
+   text-align: center;
 }
 .model-subtilte{
+   text-align: center;
+   color: #666;
    font-size: 0.95rem;
-   font-weight: 400;
+   margin-bottom: 20px;
 }
+
 .google-btn{
-   padding: 10px;
-   border-radius: 12px;
-   border: 15px;
+   display: flex;
    align-items: center;
+   justify-content: center;
+   gap: 10px;
+   width: 100%;
+   padding: 12px;
+   background: #fff;
+   border: 1.5px solid #ddd;
+   border-radius: 8px;
+   font-weight: 600;
+   color: #333;
    cursor: pointer;
    transition: 0.3s;
+   margin-bottom: 15px;
+}
+.google-btn img{
+   width: 20px;
+   height: 20px;
 }
 .google-btn:hover{
-   transform: scale(1.05);
+   border-color: #4285f4;
+   background: #f8f9ff;
+   color: #4285f4;
 }
-.login-form{
-   padding: 10px;
-   border: 10px;
-   margin-bottom: 5px;
-   
-}*/
 
+/* Divider */
+.divider{
+   position: relative;
+   text-align: center;
+   margin: 20px 0;
+   color: #aaa;
+   font-size: 0.9rem;
+}
+.divider::before{
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 0;right: 0;
+   height: 1px;
+   background: #eee;
+}
+.divider span{
+   background: white;
+   padding: 0 12px;
+}
+
+/* Form */
+.login-form{
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+}
+.login-form label{
+   font-size: 0.9rem;
+   color: #444;
+   font-weight: 500;
+}
+.login-form input{
+   padding: 12px 14px;
+   border: 1.5px solid #ddd;
+   border-radius: 8px;
+   font-size: 1rem;
+}
+
+.login-form input:focus{
+   outline: none;
+   border-color: #6a1b96;
+   box-shadow: 0 0 0 3px rgba(106, 27, 154, 0.1);
+}
+.continue-btn{
+   background: #222;
+   color: white;
+   border: none;
+   padding: 14px;
+   border-radius: 8px;
+   font-weight: 600;
+   font-size: 1rem;
+   cursor: pointer;
+   transition: 0.3s;
+   margin-top: 10px;
+}
+.continue-btn:hover{
+   background: #000;
+
+}
+.model-footer-text{
+   text-align: center;
+   font-size: 0.85rem;
+   color: #777;
+   margin-top: 15px;
+}
+.model-footer-text a{
+   text-decoration: underline;
+}
+
+/* Responsive Model */
+@media(max-width: 480px){
+   .modelcontent{
+      padding: 25px 20px;
+      margin: 20px;
+   }
+   .model-close{
+      top: 10px;
+      right: 10px;
+      
+   }
+}
